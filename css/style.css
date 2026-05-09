@@ -60,7 +60,6 @@ ul { list-style: none; }
   width: auto;
   max-width: 180px;
   display: block;
-  mix-blend-mode: screen;
   opacity: 0.9;
   object-fit: contain;
 }
