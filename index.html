@@ -19,6 +19,7 @@
       <li><a href="#work">Work</a></li>
       <li><a href="#research">Research</a></li>
       <li><a href="#projects">Projects</a></li>
+      <li><a href="#photography">Photography</a></li>
       <li><a href="#contact">Contact</a></li>
     </ul>
     <button class="nav-menu-btn" id="menuBtn" aria-label="Menu">
@@ -33,12 +34,17 @@
       <li><a href="#work" class="mobile-link">Work</a></li>
       <li><a href="#research" class="mobile-link">Research</a></li>
       <li><a href="#projects" class="mobile-link">Projects</a></li>
+      <li><a href="#photography" class="mobile-link">Photography</a></li>
       <li><a href="#contact" class="mobile-link">Contact</a></li>
     </ul>
   </div>
 
   <!-- HERO -->
   <section class="hero" id="home">
+    <div class="hero-bg">
+      <img src="assets/images/profile.jpg" alt="Sagar Panchal" />
+      <div class="hero-overlay"></div>
+    </div>
     <div class="hero-content">
       <p class="hero-eyebrow">Hello, I'm</p>
       <h1 class="hero-name">Sagar Panchal</h1>
@@ -51,6 +57,48 @@
     <div class="hero-scroll">
       <span>Scroll</span>
       <div class="scroll-line"></div>
+    </div>
+
+    <!-- Rocket Animation -->
+    <div class="rocket-scene">
+      <svg viewBox="0 0 100 480" width="80" height="380" fill="none" xmlns="http://www.w3.org/2000/svg">
+        <!-- Stars -->
+        <circle cx="15" cy="40"  r="1"   fill="white" class="star s1"/>
+        <circle cx="78" cy="90"  r="0.8" fill="white" class="star s2"/>
+        <circle cx="22" cy="170" r="1"   fill="white" class="star s3"/>
+        <circle cx="88" cy="230" r="0.7" fill="white" class="star s4"/>
+        <circle cx="8"  cy="300" r="1.1" fill="white" class="star s5"/>
+        <circle cx="70" cy="350" r="0.8" fill="white" class="star s6"/>
+
+        <!-- Earth arc -->
+        <path d="M 2 472 A 52 22 0 0 1 98 472" stroke="rgba(255,255,255,0.22)" stroke-width="1.5"/>
+        <path d="M 10 476 A 42 16 0 0 1 90 476" stroke="rgba(255,255,255,0.1)" stroke-width="1"/>
+        <path d="M 18 470 Q 38 464 50 467 Q 65 470 82 465" stroke="rgba(255,255,255,0.12)" stroke-width="0.8"/>
+
+        <!-- Rocket group -->
+        <g class="rocket-group">
+          <!-- Smoke (bottom layer) -->
+          <line x1="43" y1="94"  x2="39" y2="110" stroke="rgba(255,255,255,0.18)" stroke-width="1"   stroke-linecap="round" class="smoke sm1"/>
+          <line x1="50" y1="98"  x2="50" y2="116" stroke="rgba(255,255,255,0.22)" stroke-width="1"   stroke-linecap="round" class="smoke sm2"/>
+          <line x1="57" y1="94"  x2="61" y2="110" stroke="rgba(255,255,255,0.18)" stroke-width="1"   stroke-linecap="round" class="smoke sm3"/>
+          <!-- Flame (top layer) -->
+          <line x1="45" y1="76"  x2="42" y2="94"  stroke="rgba(255,255,255,0.5)"  stroke-width="1.5" stroke-linecap="round" class="flame fl1"/>
+          <line x1="50" y1="76"  x2="50" y2="98"  stroke="rgba(255,255,255,0.65)" stroke-width="1.5" stroke-linecap="round" class="flame fl2"/>
+          <line x1="55" y1="76"  x2="58" y2="94"  stroke="rgba(255,255,255,0.5)"  stroke-width="1.5" stroke-linecap="round" class="flame fl3"/>
+
+          <!-- Rocket body -->
+          <polygon points="50,12 43,34 57,34" stroke="white" stroke-width="1.5" stroke-linejoin="round"/>
+          <rect x="43" y="34" width="14" height="28" stroke="white" stroke-width="1.5" rx="1"/>
+          <circle cx="50" cy="45" r="4" stroke="white" stroke-width="1.2"/>
+          <!-- Fins -->
+          <polygon points="43,54 34,72 43,66" stroke="white" stroke-width="1.2" stroke-linejoin="round"/>
+          <polygon points="57,54 66,72 57,66" stroke="white" stroke-width="1.2" stroke-linejoin="round"/>
+          <!-- Nozzle -->
+          <line x1="46" y1="62" x2="45" y2="70" stroke="white" stroke-width="1.2" stroke-linecap="round"/>
+          <line x1="54" y1="62" x2="55" y2="70" stroke="white" stroke-width="1.2" stroke-linecap="round"/>
+          <line x1="50" y1="62" x2="50" y2="76" stroke="white" stroke-width="1.2" stroke-linecap="round"/>
+        </g>
+      </svg>
     </div>
   </section>
 
@@ -194,6 +242,46 @@
             <span class="project-tag">Creative</span>
             <span class="project-tag">Photography</span>
           </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- PHOTOGRAPHY -->
+  <section class="section" id="photography">
+    <div class="container">
+      <div class="section-header">
+        <span class="section-label">Photography</span>
+        <h2 class="section-title">Chasing<br>Light</h2>
+      </div>
+      <div class="photo-grid">
+        <div class="photo-item photo-tall">
+          <img src="assets/images/photo_1.jpg" alt="Lone tree in water — Andaman" />
+          <div class="photo-overlay"><span>Andaman Islands</span></div>
+        </div>
+        <div class="photo-item">
+          <img src="assets/images/photo_2.jpg" alt="Beach golden hour — Andaman" />
+          <div class="photo-overlay"><span>Golden Hour, Andaman</span></div>
+        </div>
+        <div class="photo-item">
+          <img src="assets/images/photo_5.jpg" alt="Prague Astronomical Clock" />
+          <div class="photo-overlay"><span>Praha, Czech Republic</span></div>
+        </div>
+        <div class="photo-item photo-tall">
+          <img src="assets/images/photo_6.jpg" alt="Sailboat on Lake Constance" />
+          <div class="photo-overlay"><span>Konstanz, Germany</span></div>
+        </div>
+        <div class="photo-item">
+          <img src="assets/images/photo_3.jpg" alt="Signpost silhouette — Andaman" />
+          <div class="photo-overlay"><span>Dusk, Andaman</span></div>
+        </div>
+        <div class="photo-item">
+          <img src="assets/images/photo_4.jpg" alt="Cellular Jail — Andaman" />
+          <div class="photo-overlay"><span>Cellular Jail, Port Blair</span></div>
+        </div>
+        <div class="photo-item photo-wide">
+          <img src="assets/images/photo_7.jpg" alt="Prague Christmas Market" />
+          <div class="photo-overlay"><span>Christmas Market, Praha</span></div>
         </div>
       </div>
     </div>
