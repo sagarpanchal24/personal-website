@@ -761,7 +761,7 @@ ul { list-style: none; }
 
   .hero-content {
     padding-top: 0;
-    text-align: left;
+    text-align: center;
   }
 
   .hero-name {
@@ -774,8 +774,9 @@ ul { list-style: none; }
   }
 
   .hero-cta {
+    justify-content: center;
     flex-direction: column;
-    align-items: flex-start;
+    align-items: center;
   }
 
   .hero-cta .btn { width: 100%; justify-content: center; }
