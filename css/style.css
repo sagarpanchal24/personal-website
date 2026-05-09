@@ -739,6 +739,7 @@ ul { list-style: none; }
 
   .hero { padding: 0 1.5rem; padding-top: var(--nav-h); }
   .hero-scroll { display: none; }
+  .rocket-scene { display: none; }
 
   .container { padding: 0 1.5rem; }
   .section { padding: 5rem 0; }
