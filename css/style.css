@@ -55,6 +55,16 @@ ul { list-style: none; }
   color: var(--text);
 }
 
+.nav-signature {
+  height: 48px;
+  width: auto;
+  max-width: 180px;
+  display: block;
+  mix-blend-mode: screen;
+  opacity: 0.9;
+  object-fit: contain;
+}
+
 .nav-links {
   display: flex;
   gap: 2.5rem;
@@ -736,6 +746,8 @@ ul { list-style: none; }
 @media (max-width: 640px) {
   .nav-links { display: none; }
   .nav-menu-btn { display: flex; }
+
+  .nav-signature { height: 38px; max-width: 140px; }
 
   .hero { padding: 0 1.5rem; padding-top: var(--nav-h); }
   .hero-scroll { display: none; }
