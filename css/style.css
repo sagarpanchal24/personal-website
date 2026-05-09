@@ -644,6 +644,51 @@ ul { list-style: none; }
   color: var(--text-subtle);
 }
 
+/* ── Moon Journey (mobile only) ── */
+.moon-journey {
+  display: none;
+  position: absolute;
+  top: calc(var(--nav-h) - 5px);
+  left: 0;
+  z-index: 1;
+  pointer-events: none;
+  opacity: 0.82;
+}
+
+.moon-rocket-grp {
+  animation: moonRocketFade 9s ease-in-out infinite;
+}
+
+@keyframes moonRocketFade {
+  0%        { opacity: 0; }
+  3%        { opacity: 1; }
+  58%       { opacity: 1; }
+  65%, 100% { opacity: 0; }
+}
+
+.moon-exhaust {
+  animation: moonExhaust 0.18s ease-in-out infinite alternate;
+}
+
+@keyframes moonExhaust {
+  from { opacity: 0.55; }
+  to   { opacity: 0.08; }
+}
+
+.moon-lander-grp {
+  transform-box: fill-box;
+  transform-origin: center;
+  animation: moonLander 9s ease-out infinite;
+}
+
+@keyframes moonLander {
+  0%, 60%   { opacity: 0; transform: scale(0.2); }
+  70%       { opacity: 1; transform: scale(1.05); }
+  76%       { opacity: 1; transform: scale(1); }
+  88%       { opacity: 1; transform: scale(1); }
+  96%, 100% { opacity: 0; transform: scale(0.4); }
+}
+
 /* ── Rocket Scene ── */
 .rocket-scene {
   position: absolute;
@@ -784,6 +829,7 @@ ul { list-style: none; }
   .hero-scroll { display: none; }
 
   .rocket-scene { display: none; }
+  .moon-journey { display: block; }
 
   /* Sections */
   .container { padding: 0 1.5rem; }
