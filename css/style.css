@@ -276,7 +276,7 @@ ul { list-style: none; }
   content: '';
   position: absolute;
   inset: 1.5px;
-  background: rgb(0, 0, 0); /* change this line only */
+  background: rgb(34, 34, 34); /* change this line only */
   border-radius: 1px;
   z-index: -1;
 }
