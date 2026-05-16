@@ -491,6 +491,19 @@ ul { list-style: none; }
   color: rgba(255,255,255,0.88);
   margin: 0;
   line-height: 1.6;
+  display: -webkit-box;
+  -webkit-line-clamp: 1;
+  -webkit-box-orient: vertical;
+  overflow: hidden;
+}
+
+.photo-info .see-more {
+  font-size: 0.75rem;
+  color: #1D9E75;
+  margin-top: 0.3rem;
+  display: block;
+  font-weight: 500;
+  letter-spacing: 0.03em;
 }
 
 /* ── Lightbox ── */
