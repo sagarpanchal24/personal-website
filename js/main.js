@@ -30,7 +30,7 @@ const photoData = {
       { src: 'assets/images/photo_2.jpg',          story: "There's about a 10-minute window each evening when the light turns everything gold. I'd been waiting at this beach for two hours — this was that window. The kind of light that makes you forget you're holding a camera." },
       { src: 'assets/images/photo_3.jpg',          story: "Ranked among Asia's finest beaches, Radhanagar earns it at dusk. The silhouette of a signpost against that burning sky felt like the perfect metaphor — a marker at the edge of somewhere beautiful." },
       { src: 'assets/images/photo_4.jpg',          story: "The British built this prison to isolate freedom fighters — solitary cells, no contact, no hope. Walking through it, you feel the weight of what happened here. History doesn't always sit quietly in museums." },
-      { src: 'assets/images/andman/IMG_7597.JPG',  story: 'Add your story for this shot here.' },
+      { src: 'assets/images/Andman/IMG_7597.JPG',  story: 'Add your story for this shot here.' },
     ]
   },
   praha: {
