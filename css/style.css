@@ -1160,5 +1160,24 @@ ul { list-style: none; }
 
   .project-card:hover { padding-left: 0; padding-right: 0; margin: 0; }
 
+  .project-card {
+    grid-template-columns: 32px 1fr;
+    gap: 0.9rem;
+    padding: 2rem 0;
+  }
+
+  .project-number {
+    font-size: 0.72rem;
+    padding-top: 0.2rem;
+  }
+
+  .project-info h3 {
+    font-size: 1.15rem;
+  }
+
+  .project-info p {
+    font-size: 0.88rem;
+  }
+
   .photo-gallery { grid-template-columns: 1fr; gap: 3.5rem 0; padding: 1rem 0 2rem; }
 }
