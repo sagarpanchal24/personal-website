@@ -19,6 +19,60 @@ mobileLinks.forEach(link => {
   });
 });
 
+// Lightbox
+const lightbox       = document.getElementById('lightbox');
+const lightboxImg    = document.getElementById('lightboxImg');
+const lightboxClose  = document.getElementById('lightboxClose');
+const lightboxBackdrop = document.getElementById('lightboxBackdrop');
+const lbLocation     = lightbox.querySelector('.location');
+const lbStory        = lightbox.querySelector('.story');
+let savedScrollY     = 0;
+
+function openLightbox(img, card) {
+  savedScrollY = window.scrollY;
+  lightboxImg.src = img.src;
+  lightboxImg.alt = img.alt;
+
+  const info = card.querySelector('.photo-info');
+  lbLocation.textContent = info ? info.querySelector('.location')?.textContent : '';
+  lbStory.textContent    = info ? info.querySelector('.story')?.textContent    : '';
+
+  lightbox.classList.add('open');
+  document.body.style.overflow = 'hidden';
+
+  // Push state so browser back button closes the lightbox
+  history.pushState({ lightboxOpen: true }, '');
+}
+
+function closeLightbox() {
+  lightbox.classList.remove('open');
+  document.body.style.overflow = '';
+  // Restore exact scroll position
+  requestAnimationFrame(() => window.scrollTo({ top: savedScrollY, behavior: 'instant' }));
+}
+
+// Click on any photo image opens lightbox
+document.querySelectorAll('.photo-card img').forEach(img => {
+  img.style.cursor = 'zoom-in';
+  img.addEventListener('click', (e) => {
+    e.stopPropagation();
+    openLightbox(img, img.closest('.photo-card'));
+  });
+});
+
+lightboxClose.addEventListener('click', closeLightbox);
+lightboxBackdrop.addEventListener('click', closeLightbox);
+
+// Escape key closes
+document.addEventListener('keydown', (e) => {
+  if (e.key === 'Escape' && lightbox.classList.contains('open')) closeLightbox();
+});
+
+// Browser back button closes lightbox instead of leaving page
+window.addEventListener('popstate', () => {
+  if (lightbox.classList.contains('open')) closeLightbox();
+});
+
 // Photo stack — left/right hover interaction
 document.querySelectorAll('.photo-stack').forEach(stack => {
   stack.addEventListener('mousemove', (e) => {
