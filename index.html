@@ -361,102 +361,58 @@
       </div>
 
       <!--
-      ╔══════════════════════════════════════════════════════╗
-      ║  HOW TO ADD A NEW PHOTO STACK                        ║
-      ║  Copy one <div class="photo-stack"> block below.     ║
-      ║  • front card = the photo on top (tilted)            ║
-      ║  • back card  = the photo revealed on hover-right    ║
-      ║  • location   = city / place name                    ║
-      ║  • story      = 1 short sentence about the shot      ║
-      ╚══════════════════════════════════════════════════════╝
+      ╔══════════════════════════════════════════════════════════╗
+      ║  HOW TO ADD A NEW LOCATION                               ║
+      ║  1. Copy a .location-card block below                    ║
+      ║  2. Set data-loc="your-key", cover image, name, count    ║
+      ║  3. Add matching entry in photoData in js/main.js        ║
+      ╚══════════════════════════════════════════════════════════╝
       -->
 
-      <div class="photo-gallery">
+      <div class="location-grid">
 
-        <!-- ── Stack 1 ── -->
-        <div class="photo-stack">
-          <div class="photo-card back">
-            <img src="assets/images/photo_2.jpg" alt="Golden hour beach — Andaman" />
-            <div class="photo-info">
-              <span class="location">📍 Andaman Islands, India</span>
-              <p class="story">There's about a 10-minute window each evening when the light turns everything gold. I'd been waiting at this beach for two hours — this was that window. The kind of light that makes you forget you're holding a camera.</p>
-              <span class="see-more">See more →</span>
-            </div>
-          </div>
-          <div class="photo-card front">
-            <img src="assets/images/photo_1.jpg" alt="Lone tree in water — Andaman" />
-            <div class="photo-info">
-              <span class="location">📍 Andaman Islands, India</span>
-              <p class="story">Low tide reveals a lone mangrove tree standing in the middle of perfectly clear water. No one else was around. Just the sound of small waves and this quiet, solitary tree — completely unbothered by everything.</p>
-              <span class="see-more">See more →</span>
-            </div>
+        <div class="location-card" data-loc="andaman">
+          <img src="assets/images/photo_1.jpg" alt="Andaman Islands" />
+          <div class="location-info">
+            <span class="loc-name">Andaman Islands</span>
+            <span class="loc-count">4 photos</span>
           </div>
         </div>
 
-        <!-- ── Stack 2 ── -->
-        <div class="photo-stack">
-          <div class="photo-card back">
-            <img src="assets/images/photo_7.jpg" alt="Prague Christmas Market" />
-            <div class="photo-info">
-              <span class="location">📍 Old Town Square, Praha</span>
-              <p class="story">December in Prague hits differently. The whole square transforms — warm lights, mulled wine, Christmas carols echoing off 600-year-old buildings. Tourists everywhere, but somehow it still feels magical.</p>
-              <span class="see-more">See more →</span>
-            </div>
-          </div>
-          <div class="photo-card front">
-            <img src="assets/images/photo_5.jpg" alt="Prague Astronomical Clock" />
-            <div class="photo-info">
-              <span class="location">📍 Praha, Czech Republic</span>
-              <p class="story">The Orloj has been telling time since 1410. Six centuries of kings, travellers, and tourists — all stopping to look up at the same face.
-              I framed it from a distance deliberately — the crowd blurred in motion below, the massive wall pressing in from the right. The idea was simple: people move, time moves, both indifferent to each other. And no matter how much you try to hold onto a good moment, time never stops. It just keeps running.</p>
-              <span class="see-more">See more →</span>
-            </div>
+        <div class="location-card" data-loc="praha">
+          <img src="assets/images/photo_5.jpg" alt="Praha, Czech Republic" />
+          <div class="location-info">
+            <span class="loc-name">Praha, Czech Republic</span>
+            <span class="loc-count">2 photos</span>
           </div>
         </div>
 
-        <!-- ── Stack 3 ── -->
-        <div class="photo-stack">
-          <div class="photo-card back">
-            <img src="assets/images/photo_4.jpg" alt="Cellular Jail — Andaman" />
-            <div class="photo-info">
-              <span class="location">📍 Port Blair, Andaman</span>
-              <p class="story">The British built this prison to isolate freedom fighters — solitary cells, no contact, no hope. Walking through it, you feel the weight of what happened here. History doesn't always sit quietly in museums.</p>
-              <span class="see-more">See more →</span>
-            </div>
-          </div>
-          <div class="photo-card front">
-            <img src="assets/images/photo_3.jpg" alt="Signpost silhouette — Andaman" />
-            <div class="photo-info">
-              <span class="location">📍 Radhanagar Beach, Andaman</span>
-              <p class="story">Ranked among Asia's finest beaches, Radhanagar earns it at dusk. The silhouette of a signpost against that burning sky felt like the perfect metaphor — a marker at the edge of somewhere beautiful.</p>
-              <span class="see-more">See more →</span>
-            </div>
-          </div>
-        </div>
-
-        <!-- ── Stack 4 ── -->
-        <div class="photo-stack">
-          <div class="photo-card back">
-            <img src="assets/images/photo_6.jpg" alt="Sailboat on Lake Constance" />
-            <div class="photo-info">
-              <span class="location">📍 Konstanz, Germany</span>
-              <p class="story">Lake Constance on a calm afternoon — a single sailboat barely moving, the Alps faint in the distance. I was on a weekend trip from Stuttgart. Some places slow you down without asking.</p>
-              <span class="see-more">See more →</span>
-            </div>
-          </div>
-          <div class="photo-card front">
-            <img src="assets/images/photo_6.jpg" alt="Sailboat on Lake Constance" />
-            <div class="photo-info">
-              <span class="location">📍 Konstanz, Germany</span>
-              <p class="story">Lake Constance on a calm afternoon — a single sailboat barely moving, the Alps faint in the distance. I was on a weekend trip from Stuttgart. Some places slow you down without asking.</p>
-              <span class="see-more">See more →</span>
-            </div>
+        <div class="location-card" data-loc="konstanz">
+          <img src="assets/images/photo_6.jpg" alt="Konstanz, Germany" />
+          <div class="location-info">
+            <span class="loc-name">Konstanz, Germany</span>
+            <span class="loc-count">1 photo</span>
           </div>
         </div>
 
       </div>
     </div>
   </section>
+
+  <!-- GALLERY OVERLAY -->
+  <div class="gallery-overlay" id="galleryOverlay">
+    <div class="gallery-backdrop" id="galleryBackdrop"></div>
+    <div class="gallery-panel" id="galleryPanel">
+      <div class="gallery-header">
+        <div>
+          <span class="gallery-loc-name" id="galleryLocName"></span>
+          <span class="gallery-photo-count" id="galleryPhotoCount"></span>
+        </div>
+        <button class="gallery-close" id="galleryClose" aria-label="Close gallery">✕</button>
+      </div>
+      <div class="gallery-grid" id="galleryGrid"></div>
+    </div>
+  </div>
 
   <!-- CONTACT -->
   <section class="section" id="contact">
@@ -485,15 +441,18 @@
   <!-- LIGHTBOX -->
   <div class="lightbox" id="lightbox" role="dialog" aria-modal="true">
     <div class="lightbox-backdrop" id="lightboxBackdrop"></div>
-    <button class="lightbox-close" id="lightboxClose" aria-label="Close">✕</button>
+    <button class="lightbox-close" id="lightboxClose" aria-label="Back to gallery">← Gallery</button>
     <button class="lightbox-nav lightbox-prev" id="lightboxPrev" aria-label="Previous">&#8592;</button>
-    <img class="lightbox-img" id="lightboxImg" src="" alt="" />
-    <button class="lightbox-nav lightbox-next" id="lightboxNext" aria-label="Next">&#8594;</button>
-    <div class="lightbox-caption" id="lightboxCaption">
-      <span class="location"></span>
-      <p class="story"></p>
+    <div class="lightbox-content">
+      <img class="lightbox-img" id="lightboxImg" src="" alt="" />
+      <div class="lightbox-caption" id="lightboxCaption">
+        <span class="location"></span>
+        <p class="story"></p>
+      </div>
     </div>
+    <button class="lightbox-nav lightbox-next" id="lightboxNext" aria-label="Next">&#8594;</button>
     <div class="lightbox-counter" id="lightboxCounter"></div>
+    <div class="lightbox-swipe-hint" id="swipeHint">↓ swipe down to go back</div>
   </div>
 
   <script src="js/main.js"></script>
