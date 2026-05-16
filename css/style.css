@@ -597,6 +597,49 @@ ul { list-style: none; }
   border-color: rgba(255, 255, 255, 0.3);
 }
 
+.lightbox-nav {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  z-index: 2;
+  width: 48px;
+  height: 48px;
+  border-radius: 50%;
+  border: 1px solid rgba(255, 255, 255, 0.15);
+  background: rgba(255, 255, 255, 0.08);
+  color: rgba(255, 255, 255, 0.85);
+  font-size: 1.2rem;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: background 0.2s, border-color 0.2s, opacity 0.2s;
+}
+
+.lightbox-nav:hover {
+  background: rgba(255, 255, 255, 0.18);
+  border-color: rgba(255, 255, 255, 0.35);
+}
+
+.lightbox-nav.hidden {
+  opacity: 0;
+  pointer-events: none;
+}
+
+.lightbox-prev { left: 1.6rem; }
+.lightbox-next { right: 1.6rem; }
+
+.lightbox-counter {
+  position: absolute;
+  bottom: 1.2rem;
+  right: 1.8rem;
+  z-index: 2;
+  font-size: 0.72rem;
+  color: rgba(255, 255, 255, 0.4);
+  letter-spacing: 0.08em;
+  font-weight: 500;
+}
+
 /* ── About ── */
 .about-grid {
   display: grid;
