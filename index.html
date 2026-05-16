@@ -315,36 +315,39 @@
     <div class="container">
       <div class="section-header">
         <span class="section-label">Projects</span>
-        <h2 class="section-title">Selected<br>Work</h2>
+        <h2 class="section-title">Important<br>Work</h2>
       </div>
       <div class="projects-grid">
         <div class="project-card">
           <div class="project-number">01</div>
           <div class="project-info">
             <h3>SOFC Lifetime Prediction</h3>
-            <p>Physics-based modelling to predict degradation and operational lifetime of Solid Oxide Fuel Cells.</p>
-            <span class="project-tag">Energy Systems</span>
-            <span class="project-tag">Modelling</span>
+            <p>Building a bottom-up physics model of SOFC operation — connecting material parameters, electrochemical behaviour, and thermal conditions to predict how a cell can be run at peak efficiency.</p>
+            <span class="work-tag">Energy Systems</span>
+            <span class="work-tag">Modelling</span>
           </div>
         </div>
         <div class="project-card">
           <div class="project-number">02</div>
           <div class="project-info">
-            <h3>Aerospace Research — IIT Madras</h3>
-            <p>Graduate research in computational fluid dynamics and aerospace systems during MS at IIT Madras.</p>
-            <span class="project-tag">Aerospace</span>
-            <span class="project-tag">CFD</span>
+            <h3>Mass Optimization of 25kg UAV Wing with Genetic Algorithm</h3>
+            <p>This study presents a genetic algorithm-based framework to minimize UAV wing mass by simultaneously optimizing aerodynamic shape and structural thickness. Using Vortex Lattice Method and Finite Element Analysis, two material configurations — aluminum and a hybrid aluminum/Nylon design — were evaluated. Results confirm that multidisciplinary optimization outperforms classical sequential design for UAV wing development.</p>
+            <span class="work-tag">Multi-Disciplinary Optimization</span>
+            <span class="work-tag">FEA</span>
+            <span class="work-tag">Vortex Lattice Method</span>
+            <span class="work-tag">Genetic Algorithm (GA)</span>
+            <span class="work-tag">Multi Section Wing</span>
           </div>
         </div>
-        <div class="project-card">
+        <!-- <div class="project-card">
           <div class="project-number">03</div>
           <div class="project-info">
             <h3>Photography</h3>
             <p>Ongoing exploration of light, composition, and storytelling through the lens — from street to portrait.</p>
-            <span class="project-tag">Creative</span>
-            <span class="project-tag">Photography</span>
+            <span class="work-tag">Creative</span>
+            <span class="work-tag">Photography</span>
           </div>
-        </div>
+        </div> -->
       </div>
     </div>
   </section>
@@ -356,35 +359,92 @@
         <span class="section-label">Photography</span>
         <h2 class="section-title">Chasing<br>Light</h2>
       </div>
-      <div class="photo-grid">
-        <div class="photo-item photo-tall">
-          <img src="assets/images/photo_1.jpg" alt="Lone tree in water — Andaman" />
-          <div class="photo-overlay"><span>Andaman Islands</span></div>
+
+      <!--
+      ╔══════════════════════════════════════════════════════╗
+      ║  HOW TO ADD A NEW PHOTO STACK                        ║
+      ║  Copy one <div class="photo-stack"> block below.     ║
+      ║  • front card = the photo on top (tilted)            ║
+      ║  • back card  = the photo revealed on hover-right    ║
+      ║  • location   = city / place name                    ║
+      ║  • story      = 1 short sentence about the shot      ║
+      ╚══════════════════════════════════════════════════════╝
+      -->
+
+      <div class="photo-gallery">
+
+        <!-- ── Stack 1 ── -->
+        <div class="photo-stack">
+          <div class="photo-card back">
+            <img src="assets/images/photo_2.jpg" alt="Golden hour beach — Andaman" />
+            <div class="photo-info">
+              <span class="location">📍 Andaman Islands</span>
+              <p class="story">Golden hour painting the coastline in amber and rose.</p>
+            </div>
+          </div>
+          <div class="photo-card front">
+            <img src="assets/images/photo_1.jpg" alt="Lone tree in water — Andaman" />
+            <div class="photo-info">
+              <span class="location">📍 Andaman Islands</span>
+              <p class="story">A lone mangrove standing in crystal-clear waters at low tide.</p>
+            </div>
+          </div>
         </div>
-        <div class="photo-item">
-          <img src="assets/images/photo_2.jpg" alt="Beach golden hour — Andaman" />
-          <div class="photo-overlay"><span>Golden Hour, Andaman</span></div>
+
+        <!-- ── Stack 2 ── -->
+        <div class="photo-stack">
+          <div class="photo-card back">
+            <img src="assets/images/photo_7.jpg" alt="Prague Christmas Market" />
+            <div class="photo-info">
+              <span class="location">📍 Praha, Czech Republic</span>
+              <p class="story">Mulled wine and carols in the heart of Old Town Square.</p>
+            </div>
+          </div>
+          <div class="photo-card front">
+            <img src="assets/images/photo_5.jpg" alt="Prague Astronomical Clock" />
+            <div class="photo-info">
+              <span class="location">📍 Praha, Czech Republic</span>
+              <p class="story">The medieval Orloj — still ticking since 1410.</p>
+            </div>
+          </div>
         </div>
-        <div class="photo-item">
-          <img src="assets/images/photo_5.jpg" alt="Prague Astronomical Clock" />
-          <div class="photo-overlay"><span>Praha, Czech Republic</span></div>
+
+        <!-- ── Stack 3 ── -->
+        <div class="photo-stack">
+          <div class="photo-card back">
+            <img src="assets/images/photo_4.jpg" alt="Cellular Jail — Andaman" />
+            <div class="photo-info">
+              <span class="location">📍 Port Blair, Andaman</span>
+              <p class="story">Built by the British to silence freedom fighters. The walls still echo.</p>
+            </div>
+          </div>
+          <div class="photo-card front">
+            <img src="assets/images/photo_3.jpg" alt="Signpost silhouette — Andaman" />
+            <div class="photo-info">
+              <span class="location">📍 Radhanagar, Andaman</span>
+              <p class="story">Last light at one of Asia's finest beaches.</p>
+            </div>
+          </div>
         </div>
-        <div class="photo-item photo-tall">
-          <img src="assets/images/photo_6.jpg" alt="Sailboat on Lake Constance" />
-          <div class="photo-overlay"><span>Konstanz, Germany</span></div>
+
+        <!-- ── Stack 4 ── -->
+        <div class="photo-stack">
+          <div class="photo-card back">
+            <img src="assets/images/photo_6.jpg" alt="Sailboat on Lake Constance" />
+            <div class="photo-info">
+              <span class="location">📍 Konstanz, Germany</span>
+              <p class="story">A quiet afternoon sail on Lake Constance.</p>
+            </div>
+          </div>
+          <div class="photo-card front">
+            <img src="assets/images/photo_6.jpg" alt="Sailboat on Lake Constance" />
+            <div class="photo-info">
+              <span class="location">📍 Konstanz, Germany</span>
+              <p class="story">A quiet afternoon sail on Lake Constance.</p>
+            </div>
+          </div>
         </div>
-        <div class="photo-item">
-          <img src="assets/images/photo_3.jpg" alt="Signpost silhouette — Andaman" />
-          <div class="photo-overlay"><span>Dusk, Andaman</span></div>
-        </div>
-        <div class="photo-item">
-          <img src="assets/images/photo_4.jpg" alt="Cellular Jail — Andaman" />
-          <div class="photo-overlay"><span>Cellular Jail, Port Blair</span></div>
-        </div>
-        <div class="photo-item photo-wide">
-          <img src="assets/images/photo_7.jpg" alt="Prague Christmas Market" />
-          <div class="photo-overlay"><span>Christmas Market, Praha</span></div>
-        </div>
+
       </div>
     </div>
   </section>

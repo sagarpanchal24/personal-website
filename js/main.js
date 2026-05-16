@@ -19,8 +19,21 @@ mobileLinks.forEach(link => {
   });
 });
 
+// Photo stack — left/right hover interaction
+document.querySelectorAll('.photo-stack').forEach(stack => {
+  stack.addEventListener('mousemove', (e) => {
+    const rect = stack.getBoundingClientRect();
+    const x = e.clientX - rect.left;
+    stack.classList.remove('hover-left', 'hover-right');
+    stack.classList.add(x < rect.width / 2 ? 'hover-left' : 'hover-right');
+  });
+  stack.addEventListener('mouseleave', () => {
+    stack.classList.remove('hover-left', 'hover-right');
+  });
+});
+
 // Scroll reveal
-const revealEls = document.querySelectorAll('.section-header, .about-grid, .timeline-item, .research-grid, .project-card, .contact-wrap, .focus-card');
+const revealEls = document.querySelectorAll('.section-header, .about-grid, .timeline-item, .research-grid, .project-card, .contact-wrap, .focus-card, .photo-stack');
 
 revealEls.forEach(el => el.classList.add('reveal'));
 
