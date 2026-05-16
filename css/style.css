@@ -378,26 +378,29 @@ ul { list-style: none; }
 /* ── Photography Stacks ── */
 .photo-gallery {
   display: grid;
-  grid-template-columns: repeat(3, 1fr);
-  gap: 4rem 3rem;
-  padding: 2rem 1rem 3rem;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 6rem 5rem;
+  padding: 2rem 0 3rem;
 }
 
+/* Stack = wider than a single card to show both spread apart */
 .photo-stack {
   position: relative;
   width: 100%;
-  aspect-ratio: 4 / 3;
+  aspect-ratio: 16 / 9;
   cursor: pointer;
 }
 
+/* Each card is 68% of stack width, positioned left or right */
 .photo-card {
   position: absolute;
-  inset: 0;
-  border-radius: 8px;
+  width: 68%;
+  top: 0;
+  bottom: 0;
+  border-radius: 10px;
   overflow: hidden;
   transition: transform 0.45s cubic-bezier(0.34, 1.4, 0.64, 1),
-              filter 0.3s ease,
-              box-shadow 0.3s ease;
+              box-shadow 0.35s ease;
   will-change: transform;
 }
 
@@ -406,65 +409,69 @@ ul { list-style: none; }
   height: 100%;
   object-fit: cover;
   display: block;
-  filter: grayscale(10%);
-  transition: filter 0.3s ease;
+  filter: grayscale(12%);
+  transition: filter 0.35s ease;
 }
 
-/* Default stacked positions */
-.photo-card.back {
-  transform: rotate(5deg) translate(10px, 6px);
-  z-index: 1;
-  box-shadow: 0 8px 30px rgba(0,0,0,0.4);
-}
-
+/* Default: front on left, back peeks from right */
 .photo-card.front {
-  transform: rotate(-4deg) translate(-4px, -4px);
+  left: 0;
   z-index: 2;
-  box-shadow: 0 8px 30px rgba(0,0,0,0.4);
+  transform: rotate(-2deg);
+  box-shadow: 6px 10px 35px rgba(0,0,0,0.5);
 }
 
-/* Hover LEFT → highlight front card */
+.photo-card.back {
+  right: 0;
+  z-index: 1;
+  transform: rotate(2.5deg);
+  box-shadow: -4px 10px 30px rgba(0,0,0,0.4);
+}
+
+/* Hover LEFT → front card lifts and straightens */
 .photo-stack.hover-left .photo-card.front {
-  transform: rotate(0deg) translate(0, -10px) scale(1.05);
-  filter: brightness(1.08);
-  box-shadow: 0 24px 60px rgba(0,0,0,0.6);
+  transform: rotate(0deg) translateY(-8px) scale(1.04);
+  box-shadow: 0 28px 65px rgba(0,0,0,0.65);
   z-index: 3;
 }
 
-.photo-stack.hover-left .photo-card.front img {
-  filter: grayscale(0%);
-}
+.photo-stack.hover-left .photo-card.front img { filter: grayscale(0%); }
 
-/* Hover RIGHT → slide front away, reveal back */
+/* Hover RIGHT → front slides left, back card lifts */
 .photo-stack.hover-right .photo-card.front {
-  transform: rotate(-4deg) translateX(115%);
-  z-index: 1;
+  transform: translateX(-108%) rotate(-2deg);
+  box-shadow: none;
 }
 
 .photo-stack.hover-right .photo-card.back {
-  transform: rotate(0deg) translate(0, -8px) scale(1.04);
+  transform: rotate(0deg) translateY(-8px) scale(1.04);
   z-index: 3;
-  box-shadow: 0 24px 60px rgba(0,0,0,0.6);
+  box-shadow: 0 28px 65px rgba(0,0,0,0.65);
 }
 
-.photo-stack.hover-right .photo-card.back img {
-  filter: grayscale(0%);
-}
+.photo-stack.hover-right .photo-card.back img { filter: grayscale(0%); }
 
-/* Info overlay on each card */
+/* Full-card story overlay — covers whole photo with gradient */
 .photo-info {
   position: absolute;
-  bottom: 0; left: 0; right: 0;
-  padding: 1.4rem 1.2rem 1rem;
-  background: linear-gradient(to top, rgba(0,0,0,0.88) 0%, rgba(0,0,0,0.3) 60%, transparent 100%);
-  transform: translateY(30%);
+  inset: 0;
+  padding: 1.4rem 1.3rem;
+  background: linear-gradient(
+    to top,
+    rgba(0,0,0,0.96) 0%,
+    rgba(0,0,0,0.75) 40%,
+    rgba(0,0,0,0.2)  100%
+  );
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-end;
   opacity: 0;
-  transition: transform 0.35s ease, opacity 0.35s ease;
+  transition: opacity 0.35s ease;
 }
 
 .photo-stack.hover-left .photo-card.front .photo-info,
 .photo-stack.hover-right .photo-card.back .photo-info {
-  transform: translateY(0);
+  opacity: 1;
   opacity: 1;
 }
 
@@ -479,10 +486,10 @@ ul { list-style: none; }
 }
 
 .photo-info .story {
-  font-size: 0.82rem;
+  font-size: 0.83rem;
   color: rgba(255,255,255,0.88);
   margin: 0;
-  line-height: 1.45;
+  line-height: 1.6;
 }
 
 /* ── About ── */
@@ -967,7 +974,7 @@ ul { list-style: none; }
     );
   }
 
-  .photo-gallery { grid-template-columns: repeat(2, 1fr); gap: 3rem 2rem; }
+  .photo-gallery { grid-template-columns: 1fr; gap: 4rem 0; }
 }
 
 @media (max-width: 640px) {
@@ -992,5 +999,5 @@ ul { list-style: none; }
 
   .project-card:hover { padding-left: 0; padding-right: 0; margin: 0; }
 
-  .photo-gallery { grid-template-columns: 1fr; gap: 3.5rem 0; padding: 1rem 0.5rem 2rem; }
+  .photo-gallery { grid-template-columns: 1fr; gap: 3.5rem 0; padding: 1rem 0 2rem; }
 }

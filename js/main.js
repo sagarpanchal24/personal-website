@@ -25,7 +25,8 @@ document.querySelectorAll('.photo-stack').forEach(stack => {
     const rect = stack.getBoundingClientRect();
     const x = e.clientX - rect.left;
     stack.classList.remove('hover-left', 'hover-right');
-    stack.classList.add(x < rect.width / 2 ? 'hover-left' : 'hover-right');
+    // Front card occupies left 68%, back card right 68% — use 62% as divider
+    stack.classList.add(x < rect.width * 0.62 ? 'hover-left' : 'hover-right');
   });
   stack.addEventListener('mouseleave', () => {
     stack.classList.remove('hover-left', 'hover-right');
