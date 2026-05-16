@@ -51,12 +51,12 @@ function closeLightbox() {
   requestAnimationFrame(() => window.scrollTo({ top: savedScrollY, behavior: 'instant' }));
 }
 
-// Click on any photo image opens lightbox
-document.querySelectorAll('.photo-card img').forEach(img => {
-  img.style.cursor = 'zoom-in';
-  img.addEventListener('click', (e) => {
+// Click on any photo card opens lightbox
+document.querySelectorAll('.photo-card').forEach(card => {
+  card.style.cursor = 'zoom-in';
+  card.addEventListener('click', (e) => {
     e.stopPropagation();
-    openLightbox(img, img.closest('.photo-card'));
+    openLightbox(card.querySelector('img'), card);
   });
 });
 
